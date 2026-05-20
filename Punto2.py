@@ -38,7 +38,8 @@ for x in valores_x:
     
     print(f"Horas (x): {x}")
     print(f"  Costo A: ${a} | Costo B: ${b} | Costo C: ${c}")
-    print(f"  -> Conviene el {mejor_plan} (${menor_costo})")
+    print(f"  -> Conviene el {mejor_plan} (${menor_costo})") 
+    #Aca da como resultado el C con valor -900, supongo que es a propósito (por la funcion dada) por eso lo dejo asi y no le aplico nada para cambiarlo
     print("-" * 50)
 
 # 6. Grafico en el intervalo [0, 50]
