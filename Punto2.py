@@ -23,3 +23,19 @@ def plan_mas_economico(x):
         return "Plan B", costo_b
     else:
         return "Plan C", costo_c
+    
+# 7. Evaluo las funciones para los valores dados
+valores_x = [0, 5, 10, 15, 20, 25, 30, 40, 50]
+
+print("Evaluando cual plan resulta más conveniente segun horas de uso mensual: ")
+print("-" * 50)
+for x in valores_x:
+    a = costo_A(x)
+    b = costo_B(x)
+    c = costo_C(x)
+    mejor_plan, menor_costo = plan_mas_economico(x)
+    
+    print(f"Horas (x): {x}")
+    print(f"  Costo A: ${a} | Costo B: ${b} | Costo C: ${c}")
+    print(f"  -> Conviene el {mejor_plan} (${menor_costo})")
+    print("-" * 50)
