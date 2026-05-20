@@ -1,3 +1,4 @@
+#Hacer python -m pip install matplotlib
 import matplotlib.pyplot as plt
 
 # 5. Defino las funciones y los modelos de costo
@@ -39,3 +40,33 @@ for x in valores_x:
     print(f"  Costo A: ${a} | Costo B: ${b} | Costo C: ${c}")
     print(f"  -> Conviene el {mejor_plan} (${menor_costo})")
     print("-" * 50)
+
+# 6. Grafico en el intervalo [0, 50]
+# Genero los valores del dominio 
+dominio_x = []
+for i in range(51):  # De 0 a 50 inclusive
+    dominio_x.append(i)
+
+valores_y_A = []
+valores_y_B = []
+valores_y_C = []
+
+for x in dominio_x:
+    valores_y_A.append(costo_A(x))
+    valores_y_B.append(costo_B(x))
+    valores_y_C.append(costo_C(x))
+
+# Configuración del gráfico
+plt.plot(dominio_x, valores_y_A, label='Plan A (40x + 200)', color='blue')
+plt.plot(dominio_x, valores_y_B, label='Plan B (70x + 50)', color='red')
+plt.plot(dominio_x, valores_y_C, label='Plan C (-2x^2 + 80x + 100)', color='green')
+
+# Marco el eje X donde el costo es 0 para notar los negativos
+plt.axhline(0, color='black', linewidth=1) 
+
+plt.title('Comparación de Planes de Costo de Desarrollo')
+plt.xlabel('Horas mensuales (x)')
+plt.ylabel('Costo en $')
+plt.legend()
+plt.grid(True)
+plt.show()
