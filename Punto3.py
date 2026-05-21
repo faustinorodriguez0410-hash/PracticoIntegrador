@@ -1,29 +1,18 @@
-M = [
-    [120, 150, 100],
-    [200, 180, 220],
-    [90, 110, 95]
-]
+# Matriz transpuesta
 
-print("Promedio por función:")
-
-for i in range(3):
-    suma = 0
-
-    for j in range(3):
-        suma = suma + M[i][j]
-
-    promedio = suma / 3
-
-    print("Funcion", i + 1, ":", promedio)
-
-print("\nPromedio por servidor:")
+MT = []
 
 for j in range(3):
-    suma = 0
+
+    fila = []
 
     for i in range(3):
-        suma = suma + M[i][j]
 
-    promedio = suma / 3
+        fila.append(M[i][j])
 
-    print("Servidor", j + 1, ":", promedio)
+    MT.append(fila)
+
+print("Matriz transpuesta:")
+
+for fila in MT:
+    print(fila)
