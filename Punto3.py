@@ -1,18 +1,36 @@
-# Matriz transpuesta
+M = [
+    [120, 150, 100],
+    [200, 180, 220],
+    [90, 110, 95]
+]
 
-MT = []
+C = [
+    [30, 20, 10],
+    [15, 25, 20],
+    [40, 10, 30]
+]
 
-for j in range(3):
+
+
+T = []
+
+for i in range(3):
 
     fila = []
 
-    for i in range(3):
+    for j in range(3):
 
-        fila.append(M[i][j])
+        suma = 0
 
-    MT.append(fila)
+        for k in range(3):
 
-print("Matriz transpuesta:")
+            suma = suma + M[i][k] * C[k][j]
 
-for fila in MT:
+        fila.append(suma)
+
+    T.append(fila)
+
+print("Matriz T:")
+
+for fila in T:
     print(fila)
