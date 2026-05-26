@@ -39,7 +39,7 @@ for x in valores_x:
     print(f"Horas (x): {x}")
     print(f"  Costo A: ${a} | Costo B: ${b} | Costo C: ${c}")
     print(f"  -> Conviene el {mejor_plan} (${menor_costo})") 
-    #Aca da como resultado el C con valor -900, supongo que es a propósito (por la funcion dada) por eso lo dejo asi y no le aplico nada para cambiarlo
+    #Aca da como resultado el C con valor -900, lo que sucede por la funcion dada y su concavidad negativa
     print("-" * 50)
 
 # 6. Grafico en el intervalo [0, 50]
